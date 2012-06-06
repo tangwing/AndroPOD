@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<TextView 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" android:text="@string/hello"/>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/Vitesse"
+	    android:id="@+id/tvVitesse"/>
+    <RadioGroup
+        android:layout_gravity="center"
+        android:id="@+id/group"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <RadioButton android:id="@+id/radio_vite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ButtonVite"
+          />
+      <RadioButton android:id="@+id/radio_moyen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ButtonMoyen" 
+          android:checked="true"
+          />
+      <RadioButton android:id="@+id/radio_lent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ButtonLent" 
+          />
+    </RadioGroup>
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<!--     <Button android:layout_height="wrap_content"  -->
+<!--         android:layout_width="wrap_content"         -->
+<!--         android:layout_gravity="center" -->
+<!--         android:text="@string/ButtonReset"  -->
+<!--         android:id="@+id/buttonreset"/> -->
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle00"
+	    android:id="@+id/tv0"/>
+    <Button android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"        
+        android:layout_gravity="left"
+        android:text="@string/ButtonLeftArrowText" 
+        android:id="@+id/button0LeftArrow1"/>   
+<!-- 	<ImageButton android:layout_height="wrap_content"  -->
+<!--         android:layout_width="wrap_content"         -->
+<!--         android:layout_gravity="left" -->
+<!--         android:text="@string/ButtonLeftArrowText"  -->
+<!--         android:id="@+id/button0LeftArrow1" -->
+<!--         android:src="@drawable/clockwise"/> -->
+		<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle1"
+	    android:id="@+id/tvAngle0"/>
+	<Button android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="right"
+	    android:text="@string/ButtonRightArrowText" 
+	    android:id="@+id/button0RightArrow1"/>      
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle01"
+	    android:id="@+id/tv1"/>
+    <Button android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"        
+        android:layout_gravity="left"
+        android:text="@string/ButtonLeftArrowText" 
+        android:id="@+id/button1LeftArrow1"/>   
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle1"
+	    android:id="@+id/tvAngle1"/>
+	<Button android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="right"
+	    android:text="@string/ButtonRightArrowText" 
+	    android:id="@+id/button1RightArrow1"/>      
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle02"
+	    android:id="@+id/tv2"/>
+
+    <Button android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"        
+        android:layout_gravity="left"
+        android:text="@string/ButtonLeftArrowText" 
+        android:id="@+id/button2LeftArrow1"/>   
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle1"
+	    android:id="@+id/tvAngle2"/>
+	<Button android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="right"
+	    android:text="@string/ButtonRightArrowText" 
+	    android:id="@+id/button2RightArrow1"/>      
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle03"
+	    android:id="@+id/tv3"/>
+    <Button android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"        
+        android:layout_gravity="left"
+        android:text="@string/ButtonLeftArrowText" 
+        android:id="@+id/button3LeftArrow1"/>   
+	<TextView android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:layout_gravity="center"
+	    android:text="@string/angle1"
+	    android:id="@+id/tvAngle3"/>
+	<Button android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="right"
+	    android:text="@string/ButtonRightArrowText" 
+	    android:id="@+id/button3RightArrow1"/>      
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">      
+</LinearLayout>
+
+
+<EditText 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:id="@+id/editInput" 
+    android:text="@string/TextInputText">
+    <requestFocus></requestFocus>
+</EditText>
+
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/ButtonText" android:id="@+id/buttonTransmit"></Button>
+
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/scrollOutput">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent" android:id="@+id/textOutput" android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
