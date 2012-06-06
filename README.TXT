@@ -1,0 +1,1 @@
+This is the project of the course SE. We create an application to use a card named AndroPOD to control a robot.
