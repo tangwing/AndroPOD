@@ -1,1 +1,1 @@
-This is the project of the course SE. We create an application to use a card named AndroPOD to control a robot.
+This is the project of the course OS. We create an application for a microchip named AndroPOD to control a robot.

@@ -385,7 +385,7 @@ private class OnButtonTouchedListener implements OnTouchListener
 	
 	private Handler mHandler = new Handler();
 	//private RadioButton radioButton = null;
-	private int vitesse;
+	private int vitesse=1000;
 	public static boolean stop=false;
 	public static boolean isLongClicked=false;
 	final private int ANGLE_DELTA=6;
