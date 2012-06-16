@@ -1,0 +1,3 @@
+Développement d'une application sous android pour microcontroleur microchip	
+Pascal Makris
+la société microchip a développé une carte d'évaluation pour développement d'applications sous android. l'objectif de ce projet est de prendre en main cette carte et son environnement de développement et de proposer une application mettant en avant les fonctionnalités de cette carte.
