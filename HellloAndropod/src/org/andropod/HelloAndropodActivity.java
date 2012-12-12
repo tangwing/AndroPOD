@@ -12,16 +12,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class HelloAndropodActivity extends Activity {
-	
 	
     /** 
      * Called when the activity is first created. 
@@ -31,11 +30,12 @@ public class HelloAndropodActivity extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+//        getWindow().setSoftInputMode(
+//        	      WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        getWindow().setSoftInputMode(
+      	      WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         initComponents();
-        
-        //Set listeners:
-        
+
         //The radio group for setting the speed
         group.setOnCheckedChangeListener(new OnCheckedChangeListener() {  
             	public void onCheckedChanged(RadioGroup group, int checkedId) {  
@@ -49,17 +49,6 @@ public class HelloAndropodActivity extends Activity {
                 }  
           });
      
-//        buttonReset.setOnClickListener(new OnClickListener()
-//	        {
-//	        	public void onClick(View v)
-//	        	{
-//	        		tv0.setText("0");
-//	        		tv1.setText("0");
-//	        		tv2.setText("0");
-//	        		tv3.setText("0");
-//	        		tv4.setText("0");
-//	        	}
-//	        });
         //Groups of motor controller
         button0Left.setOnClickListener(new OnButtonClickedListener());
         button0Left.setOnTouchListener(new OnButtonTouchedListener());
@@ -89,10 +78,6 @@ public class HelloAndropodActivity extends Activity {
         button3Right.setOnTouchListener(new OnButtonTouchedListener());
         button3Right.setOnLongClickListener(new OnButtonLongClickListener());
         
-
-        
-        
-          
 
         //Set the on click listener for the transmit button
         buttonTransmit.setOnClickListener(new View.OnClickListener()
@@ -137,6 +122,8 @@ public class HelloAndropodActivity extends Activity {
 							Thread.sleep(100); //Sleep some time to minimize CPU usage
 						}
 					}
+					appendText("The port of AndroPOD is not open!\n");
+					//appendText("The \nport\n of\n AndroPOD\n is\n not \nopen!\n");
 				}catch (Exception e){}
 			}
 		});
@@ -201,8 +188,14 @@ public class HelloAndropodActivity extends Activity {
         textOutput = (TextView)findViewById(R.id.textOutput);
         scrollOutput = (ScrollView)findViewById(R.id.scrollOutput); 
     }
-    
 
+//The onClick action of the connect button
+public void connectToAndropod(View view)
+{
+	if(andropod == null)
+		andropod = new AndropodConnection();
+	this.andropod.onResume();
+}
 /**
  * Generate command according to the motor number and position in angle form.
  * */
@@ -339,18 +332,18 @@ private class OnButtonTouchedListener implements OnTouchListener
     }
     
     /**
-     * Append text and scroll to the botton on the output field
+     * Append text and scroll to the button on the output field
      * thread safe
      * @param text	New text to be appended to the textView
      */
     public static void appendText(String text)
     {
-    	//final String newText = text;
+    	final String newText = text;
     	
 		handlerGui.post(new Runnable() {									
 			public void run() {
-//				textOutput.append(newText);	
-//				scrollOutput.fullScroll(ScrollView.FOCUS_DOWN);
+				textOutput.append(newText);	
+				scrollOutput.fullScroll(ScrollView.FOCUS_DOWN);
 			}
 		});
     }
@@ -368,7 +361,7 @@ private class OnButtonTouchedListener implements OnTouchListener
 	private TextView tv1 = null;
 	private TextView tv2 = null;
 	private TextView tv3 = null;
-	private TextView tv4 = null;
+	//private TextView tv4 = null;
 	
 	//private Button buttonReset=null;
 	private Button button0Left = null;
@@ -379,8 +372,8 @@ private class OnButtonTouchedListener implements OnTouchListener
 	private Button button2Right = null;
 	private Button button3Left = null;
 	private Button button3Right = null;
-	private Button button4Left = null;
-	private Button button4Right = null;
+//	private Button button4Left = null;
+//	private Button button4Right = null;
 	private RadioGroup group = null;
 	
 	private Handler mHandler = new Handler();

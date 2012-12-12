@@ -4,26 +4,156 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-<TextView 
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" android:text="@string/hello"/>
+<!-- The connect button -->
 <LinearLayout 
     android:orientation="horizontal"
     android:gravity="center"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
-    
-    <TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/Vitesse"
-	    android:id="@+id/tvVitesse"/>
-    <RadioGroup
+    <Button android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"        
         android:layout_gravity="center"
-        android:id="@+id/group"
-      android:layout_width="fill_parent"
+        android:text="@string/ButtonConn" 
+        android:onClick="connectToAndropod"
+        android:id="@+id/buttonconn"/>
+</LinearLayout>
+
+
+
+<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:gravity="center"
+	    android:layout_height="wrap_content">
+	<LinearLayout 
+		    android:orientation="vertical"
+		    android:layout_width="wrap_content"
+		    android:gravity="center"
+		    android:layout_height="wrap_content">
+		<!-- 4 lines of button controls for the 4 servomotor on Lynxmotion -->
+		<!-- Motor1 -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+		    android:gravity="center"
+		    android:layout_height="wrap_content">
+		
+		    <TextView
+		        android:id="@+id/tv0"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/angle00" />
+		
+		    <Button android:layout_height="wrap_content" 
+		        android:layout_width="wrap_content"        
+		        android:layout_gravity="left"
+		        android:text="@string/ButtonLeftArrowText" 
+		        android:id="@+id/button0LeftArrow1"/>   
+				<TextView android:layout_width="40dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="center"
+			    android:text="@string/angle1"
+			    android:id="@+id/tvAngle0"/>
+			<Button android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="right"
+			    android:text="@string/ButtonRightArrowText" 
+			    android:id="@+id/button0RightArrow1"/>      
+		</LinearLayout>
+		
+		<!-- Motor2 -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content" 
+			    android:layout_gravity="center"
+			    android:text="@string/angle01"
+			    android:id="@+id/tv1"/>
+		    <Button android:layout_height="wrap_content" 
+		        android:layout_width="wrap_content"        
+		        android:layout_gravity="left"
+		        android:text="@string/ButtonLeftArrowText" 
+		        android:id="@+id/button1LeftArrow1"/>   
+			<TextView android:layout_width="40dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="center"
+			    android:text="@string/angle1"
+			    android:id="@+id/tvAngle1"/>
+			<Button android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="right"
+			    android:text="@string/ButtonRightArrowText" 
+			    android:id="@+id/button1RightArrow1"/>      
+		</LinearLayout>
+		
+		<!-- Motor3 -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+		
+			<TextView android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content" 
+			    android:layout_gravity="center"
+			    android:text="@string/angle02"
+			    android:id="@+id/tv2"/>
+		
+		    <Button android:layout_height="wrap_content" 
+		        android:layout_width="wrap_content"        
+		        android:layout_gravity="left"
+		        android:text="@string/ButtonLeftArrowText" 
+		        android:id="@+id/button2LeftArrow1"/>   
+			<TextView android:layout_width="40dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="center"
+			    android:text="@string/angle1"
+			    android:id="@+id/tvAngle2"/>
+			<Button android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="right"
+			    android:text="@string/ButtonRightArrowText" 
+			    android:id="@+id/button2RightArrow1"/>      
+		</LinearLayout>
+		
+		<!-- Motor4 -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content" 
+			    android:layout_gravity="center"
+			    android:text="@string/angle03"
+			    android:id="@+id/tv3"/>
+		    <Button android:layout_height="wrap_content" 
+		        android:layout_width="wrap_content"        
+		        android:layout_gravity="left"
+		        android:text="@string/ButtonLeftArrowText" 
+		        android:id="@+id/button3LeftArrow1"/>   
+			<TextView android:layout_width="40dp" 
+			    android:layout_height="wrap_content" 
+			    android:gravity="center"
+			    android:text="@string/angle1"
+			    android:id="@+id/tvAngle3"/>
+			<Button android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="right"
+			    android:text="@string/ButtonRightArrowText" 
+			    android:id="@+id/button3RightArrow1"/>      
+		</LinearLayout>
+	</LinearLayout>
+	<!-- The radio group for speed control -->
+	<RadioGroup
+      android:layout_gravity="center"
+      android:id="@+id/group"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:orientation="horizontal">
+      android:orientation="vertical">
       <RadioButton android:id="@+id/radio_vite"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -42,147 +172,32 @@
           />
     </RadioGroup>
 </LinearLayout>
+
 <LinearLayout 
     android:orientation="horizontal"
-    android:gravity="center"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-<!--     <Button android:layout_height="wrap_content"  -->
-<!--         android:layout_width="wrap_content"         -->
-<!--         android:layout_gravity="center" -->
-<!--         android:text="@string/ButtonReset"  -->
-<!--         android:id="@+id/buttonreset"/> -->
-</LinearLayout>
-<LinearLayout 
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-    <TextView android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    >
+	<!-- The field to input command -->
+	<EditText 
+	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle00"
-	    android:id="@+id/tv0"/>
-    <Button android:layout_height="wrap_content" 
-        android:layout_width="wrap_content"        
-        android:layout_gravity="left"
-        android:text="@string/ButtonLeftArrowText" 
-        android:id="@+id/button0LeftArrow1"/>   
-<!-- 	<ImageButton android:layout_height="wrap_content"  -->
-<!--         android:layout_width="wrap_content"         -->
-<!--         android:layout_gravity="left" -->
-<!--         android:text="@string/ButtonLeftArrowText"  -->
-<!--         android:id="@+id/button0LeftArrow1" -->
-<!--         android:src="@drawable/clockwise"/> -->
-		<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle1"
-	    android:id="@+id/tvAngle0"/>
+	    android:layout_weight="1"
+	    android:id="@+id/editInput" 
+	    android:text="@string/TextInputText">
+	    <requestFocus></requestFocus>
+	</EditText>
+	
+	<!-- The button to send commands -->
 	<Button android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content"
-	    android:layout_gravity="right"
-	    android:text="@string/ButtonRightArrowText" 
-	    android:id="@+id/button0RightArrow1"/>      
-</LinearLayout>
-<LinearLayout 
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle01"
-	    android:id="@+id/tv1"/>
-    <Button android:layout_height="wrap_content" 
-        android:layout_width="wrap_content"        
-        android:layout_gravity="left"
-        android:text="@string/ButtonLeftArrowText" 
-        android:id="@+id/button1LeftArrow1"/>   
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle1"
-	    android:id="@+id/tvAngle1"/>
-	<Button android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content"
-	    android:layout_gravity="right"
-	    android:text="@string/ButtonRightArrowText" 
-	    android:id="@+id/button1RightArrow1"/>      
-</LinearLayout>
-<LinearLayout 
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle02"
-	    android:id="@+id/tv2"/>
-
-    <Button android:layout_height="wrap_content" 
-        android:layout_width="wrap_content"        
-        android:layout_gravity="left"
-        android:text="@string/ButtonLeftArrowText" 
-        android:id="@+id/button2LeftArrow1"/>   
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle1"
-	    android:id="@+id/tvAngle2"/>
-	<Button android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content"
-	    android:layout_gravity="right"
-	    android:text="@string/ButtonRightArrowText" 
-	    android:id="@+id/button2RightArrow1"/>      
-</LinearLayout>
-<LinearLayout 
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle03"
-	    android:id="@+id/tv3"/>
-    <Button android:layout_height="wrap_content" 
-        android:layout_width="wrap_content"        
-        android:layout_gravity="left"
-        android:text="@string/ButtonLeftArrowText" 
-        android:id="@+id/button3LeftArrow1"/>   
-	<TextView android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center"
-	    android:text="@string/angle1"
-	    android:id="@+id/tvAngle3"/>
-	<Button android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content"
-	    android:layout_gravity="right"
-	    android:text="@string/ButtonRightArrowText" 
-	    android:id="@+id/button3RightArrow1"/>      
-</LinearLayout>
-<LinearLayout 
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">      
+	    android:layout_width="wrap_content" 
+	    android:layout_weight="0"
+	    android:text="@string/ButtonText" 
+	    android:id="@+id/buttonTransmit"></Button>
+    
 </LinearLayout>
 
-
-<EditText 
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:id="@+id/editInput" 
-    android:text="@string/TextInputText">
-    <requestFocus></requestFocus>
-</EditText>
-
-<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/ButtonText" android:id="@+id/buttonTransmit"></Button>
-
+<!-- Show debug info -->
 <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/scrollOutput">
     <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <TextView android:layout_width="fill_parent" android:id="@+id/textOutput" android:layout_height="wrap_content"></TextView>

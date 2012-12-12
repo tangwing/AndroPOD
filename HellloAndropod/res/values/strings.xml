@@ -2,18 +2,18 @@
 <resources>
     <string name="hello">HelloAndropod!</string>
     <string name="app_name">HelloAndropod</string>
-    <string name="ButtonText">Transmit to Andropod</string>
+    <string name="ButtonText">Send command</string>
     <string name="TextInputText">#0P1111</string>
     <string name="ButtonLeftArrowText">&lt;&lt;&lt;&lt;</string>
     <string name="ButtonRightArrowText">&gt;&gt;&gt;&gt;</string>
-    <string name="ButtonReset">reset</string>
+    <string name="ButtonConn">Connect</string>
     <string name="angle1">0</string>
     <string name="angle00">moteur 0:&#160;&#160;</string>
     <string name="angle01">moteur 1:&#160;&#160;</string>
     <string name="angle02">moteur 2:&#160;&#160;</string>
     <string name="angle03">moteur 3:&#160;&#160;</string>
     <string name="angle04">moteur 4:&#160;&#160;</string>
-    <string name="ButtonVite">vite</string>
+    <string name="ButtonVite">Vite</string>
     <string name="ButtonMoyen">Moyen</string>
     <string name="ButtonLent">Lent</string>
     <string name="Vitesse">&#160;Vitesse:</string>

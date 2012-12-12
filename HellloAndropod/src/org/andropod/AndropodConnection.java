@@ -25,7 +25,7 @@ extends Thread
 	 */
 	public AndropodConnection()
 	{
-		this.onResume();
+		//this.onResume();
 	}
 
 	public void run()
